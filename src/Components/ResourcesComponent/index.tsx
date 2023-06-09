@@ -12,17 +12,11 @@ export interface ResourcesProps {
 
 const ResourcesComponent = ({ name, width = 64, height = 64, capacity, own }: ResourcesProps) => {
   return (
-    <Row align={'middle'} justify={'center'} gutter={[10, 0]}>
-      <Col style={{ margin: 'auto' }}>
-        <ResourcesImg
-          style={{
-            width: width,
-            height: height,
-            backgroundImage: `url('/Assets/ResourcesIcons/${name}.png')`,
-          }}
-        />
+    <Row gutter={[8, 0]} align="middle">
+      <Col>
+        <ResourcesImg type={name} width={width} height={height} />
       </Col>
-      <Col style={{ margin: 'auto' }}>
+      <Col>
         <ResourcesTag>
           {Math.floor(own)} / {Math.floor(capacity)}
         </ResourcesTag>

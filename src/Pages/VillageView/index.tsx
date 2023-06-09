@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { Button, Col, Divider, Row } from 'antd';
+import { Button, Col, Row } from 'antd';
 
 import { router } from 'router';
 
@@ -19,13 +19,11 @@ const VillageView = () => {
           <Button onClick={() => setModal(true)}>Modal</Button>
           <Button onClick={() => router.navigate('test')}>test</Button>
           <UpgradeView open={modal} setOpen={setModal} />
-          <Row gutter={[20, 20]} align="middle" justify="center" style={{ marginLeft: 0, marginRight: 0 }}>
+          <Row gutter={[20, 20]} align="top">
             <Col>
               <Village />
             </Col>
             <Col>
-              <ResourcesTable />
-              <Divider />
               <ResourcesTable />
             </Col>
           </Row>
