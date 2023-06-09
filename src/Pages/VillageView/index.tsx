@@ -2,8 +2,6 @@ import { useState } from 'react';
 
 import { Button, Col, Row } from 'antd';
 
-import { router } from 'router';
-
 import Village from 'Containers/Village';
 import ResourcesTable from 'Containers/ResourcesTable';
 import { Background, CenteredBox } from 'Components/CommonComponents';
@@ -17,9 +15,8 @@ const VillageView = () => {
       <Background>
         <CenteredBox>
           <Button onClick={() => setModal(true)}>Modal</Button>
-          <Button onClick={() => router.navigate('test')}>test</Button>
           <UpgradeView open={modal} setOpen={setModal} />
-          <Row gutter={[20, 20]} align="top">
+          <Row gutter={[16, 16]} align="top" justify="center">
             <Col>
               <Village />
             </Col>
